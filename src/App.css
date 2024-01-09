@@ -1,38 +1,84 @@
-.App {
+h1{
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  color: white;
+  font-family: verdana;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: rgb(65, 65, 65);
+  font-family: verdana, Arial, Helvetica;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hambMenu{
+  padding-left: 15px;
+  cursor:pointer;
+}
+
+.row{
+  display:flex;
+  justify-content: flex-start;
+  
+}
+
+.grid{
+  border-style:dotted;
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow:3;
+  
+}
+
+.sidebar{ 
+  height: 625px;
+  width: 300px;
+  border-style: solid;
+  flex-shrink: 1;
+}
+
+input.searchbar{
+  width: 100%px;
+  height: 20px;
+  padding: 2px;
+  margin: 8px;
+}
+
+.logo{
+  font-size: 25px;
+  border-radius: 10px;
+  background: red;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.videoItem{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-shrink:1;
+  margin-left: 50px;
+  border:dotted;
 }
 
-.App-link {
-  color: #61dafb;
+.videoTitle{
+  display:flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile{
+  margin-top:10px;
+  margin-right:10px;
+  border-radius: 50%;
 }

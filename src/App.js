@@ -1,25 +1,75 @@
-import logo from './logo.svg';
+
+import logo from './iconMenu.png';
+import { useState} from 'react';
+import thumbnail from "./videoPlaceholder.jpg";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function SidebarMenu({clickFunction}){  
+  return <img className="hambMenu" src={logo} alt="menu" width="40" height="40" onClick={()=>clickFunction()}/>
+  }
+  
+function Sidebar(){
+  return( 
+    <p>Sidebar Placeholder</p>
+  );
+}
+
+function VideoItem({video}){
+
+  return(
+    <div className="videoItem">
+      <img src={thumbnail} alt="video img" width="250" height="150"/>
+      <div className="videoTitle">
+        <img className="profile" src={thumbnail} alt="video img" width="40" height="40" />
+        <p color="white">{video.name}</p>
+      </div>
     </div>
   );
 }
 
-export default App;
+function VideoGrid({ videos }){
+  const videoList = [];
+
+  videos.forEach((video) =>{
+    videoList.push(video);
+  });
+  return(
+    <>
+      {videoList.map(video => (
+        <VideoItem key={video.name} video={video}/>
+      ))}
+    </>
+  );
+}
+
+export default function App() {
+  const [sidebar, setSidebar] = useState({isHidden : false});
+  const sidebarStyle = { visibility: sidebar.isHidden ? 'hidden' : 'visible' };
+  function toggleHidden(){
+    setSidebar({isHidden : !sidebar.isHidden});
+  }
+
+  return (
+    <div>
+      <div className="header">
+        <SidebarMenu clickFunction={() => toggleHidden()}/>
+        <h1 className="logo">Youtube</h1>
+      </div>
+      <div className="row">
+        <div style={sidebarStyle} className="sidebar">
+          <Sidebar/>
+        </div>
+        <div className="grid">
+          <VideoGrid videos={VIDEOS}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+const VIDEOS = [
+  {name:"Video 1", category:"Test"},
+  {name:"Video 2", category:"Test1"},
+  {name:"Video 3", category:"Test"},
+  {name:"Video 4", category:"Test"},
+  {name:"Video 5", category:"Test1"}
+];
