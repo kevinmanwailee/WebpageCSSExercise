@@ -20,7 +20,7 @@ body {
   justify-content: flex-start;
 }
 
-.hambMenu{
+img.hambMenu{
   padding-left: 15px;
   cursor:pointer;
 }
@@ -28,7 +28,6 @@ body {
 .row{
   display:flex;
   justify-content: flex-start;
-  
 }
 
 .grid{
@@ -46,14 +45,8 @@ body {
   flex-shrink: 1;
 }
 
-input.searchbar{
-  width: 100%px;
-  height: 20px;
-  padding: 2px;
-  margin: 8px;
-}
 
-.logo{
+h1.logo{
   font-size: 25px;
   border-radius: 10px;
   background: red;
@@ -62,23 +55,38 @@ input.searchbar{
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  cursor:pointer;
 }
 
-.videoItem{
+div.videoItem{
   display: flex;
   flex-direction: column;
   flex-shrink:1;
+  margin-top: 50px;
   margin-left: 50px;
+  height:210px;
   border:dotted;
+  cursor:pointer;
 }
 
-.videoTitle{
+div.videoDescription{
   display:flex;
   flex-direction: row;
+}
+
+p.videoTitle{
+  color: white;
+  font-size: 13px;
 }
 
 .profile{
   margin-top:10px;
   margin-right:10px;
   border-radius: 50%;
+}
+
+.searchBar{
+  margin-left: 50%;
+  padding:5px 12px;
+  width: 500px; 
 }
