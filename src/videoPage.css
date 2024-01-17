@@ -1,0 +1,30 @@
+h1.logo{
+    font-size: 25px;
+    border-radius: 10px;
+    background: red;
+    margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor:pointer;
+}
+
+.webpage{
+    display: flex;
+    flex-direction: column;
+}
+
+.videoArea{ 
+    display: flex;
+    flex-grow: 1;
+    background-color: black;
+    justify-content: center;
+    max-height: 600px;
+}
+
+.video{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

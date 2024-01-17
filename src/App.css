@@ -12,6 +12,7 @@ p{
 body {
   background-color: rgb(65, 65, 65);
   font-family: verdana, Arial, Helvetica;
+  margin: 0%;
 }
 
 .header{
@@ -43,7 +44,7 @@ img.hambMenu{
 
 .sidebar{ 
   height: 1000px;
-  width: 400px;
+  width: 200px;
   border-style: solid;
 }
 
