@@ -28,3 +28,11 @@ h1.logo{
     max-height: 100%;
     object-fit: contain;
 }
+
+.descriptionText{
+    margin: 2px;
+    margin-left: 5px;
+    display: flex;
+    color: whitesmoke;
+    font-size: 12px;
+}
