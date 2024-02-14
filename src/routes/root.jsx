@@ -2,35 +2,16 @@ import { Link } from "react-router-dom";
 import React from "react";
 import logo from '../iconMenu.png';
 import thumbnail from "../videoPlaceholder.jpg";
+import  Header from "./header.jsx";
 import '../App.css';
 
-function Header(){
-  return(
-    <div className="header">
-      <SidebarMenu/>
-      <Link to="/" rel="noreferrer" className="home">
-        <h1 className="logo">Youtube</h1>
-      </Link>
-      <form>
-        <input type="text" className="searchBar" placeholder="Search"></input>
-      </form>
-    </div>
-  );
-}
+
 
 function SidebarMenu({clickFunction}){  
   return(
      <img className="hambMenu" src={logo} alt="menu" width="40" height="40" onClick={()=>clickFunction()}/>
     );
   }
-    
-function Sidebar(){
-  return( 
-    <div className="sidebar">
-      <p>Sidebar Placeholder</p>
-    </div>
-  );
-}
 
 function VideoItem({video}){
 
@@ -64,15 +45,8 @@ function VideoItem({video}){
 
 export default function Root(){  
     return (
-      <div>
+      <div id="Outer">
         <Header/>
-        <div className="row">
-        
-          <Sidebar/>
-          <div className="grid">
-            <VideoGrid videos={VIDEOS}/>
-          </div>
-        </div>
       </div>
     );
   }
