@@ -96,7 +96,10 @@ export default function Header() {
           </div>
         </ListItem>
         <ListItem key="Home" style={{ maxHeight: "50px" }}>
-          <ListItemButton>
+          <ListItemButton
+            component={Link}
+            to={'/'}
+            >
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
